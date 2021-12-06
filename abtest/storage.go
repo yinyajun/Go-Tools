@@ -7,19 +7,18 @@ package abtest
 
 import (
 	"fmt"
+	"github.com/fsnotify/fsnotify"
 	"io/ioutil"
 	"log"
 	"path"
 	"path/filepath"
 	"strings"
-
-	"github.com/fsnotify/fsnotify"
 )
 
 type Storage interface {
-	Init()                      // 初始化配置
-	Watch()                     // 监控配置改动
-	Register(r *Registry) error // 注册
+	Init()                                       // 初始化配置
+	Watch()                                      // 监控配置改动
+	RegisterFunc(key string, f UpdateFunc) error // 注册更新函数
 }
 
 type UpdateFunc func(key string, data []byte) error
@@ -44,7 +43,7 @@ func NewLocalFile(dirname string) *LocalFile {
 	return s
 }
 
-func (l *LocalFile) registerFunc(key string, f UpdateFunc) error {
+func (l *LocalFile) RegisterFunc(key string, f UpdateFunc) error {
 	if l.updateMap == nil {
 		l.updateMap = make(map[string]UpdateFunc)
 	}
@@ -55,15 +54,6 @@ func (l *LocalFile) registerFunc(key string, f UpdateFunc) error {
 		return fmt.Errorf("updateFunc is nil")
 	}
 	l.updateMap[key] = f
-	return nil
-}
-
-func (l *LocalFile) Register(r *Registry) error {
-	for k, v := range r.Dict {
-		if err := l.registerFunc(k, UpdateFuncFactory(v)); err != nil {
-			return err
-		}
-	}
 	return nil
 }
 

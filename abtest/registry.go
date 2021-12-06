@@ -22,6 +22,15 @@ func (r *Registry) Lookup(name string) (*Domain, bool) {
 	return nil, false
 }
 
+func (r *Registry) Inject(s Storage) error {
+	for k, v := range r.Dict {
+		if err := s.RegisterFunc(k, UpdateFuncFactory(v)); err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
 func UpdateFuncFactory(addr *unsafe.Pointer) UpdateFunc {
 	return func(key string, data []byte) error {
 		domain, err := Parse(key, data)

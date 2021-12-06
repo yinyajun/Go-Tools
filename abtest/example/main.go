@@ -31,7 +31,7 @@ var (
 
 func init() {
 	storage = abtest.NewLocalFile("example/domain")
-	if err = storage.Register(registry); err != nil {
+	if err = registry.Inject(storage); err != nil {
 		log.Panicln("RegisterMap failed", err)
 	}
 	storage.Init()
@@ -43,6 +43,7 @@ func DomainHandler(w http.ResponseWriter, r *http.Request) {
 	d, ok := registry.Lookup(domain)
 	if !ok {
 		fmt.Fprintln(w, "domain not found")
+		return
 	}
 	b, _ := json.Marshal(d)
 	fmt.Fprintln(w, string(b))

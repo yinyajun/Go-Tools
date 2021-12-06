@@ -1,0 +1,49 @@
+/*-------- img-thumbnails --------*/
+.img-thumbnails {
+  display: block;
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+
+  @media #{$medium-and-up} {
+    height: 9rem;
+  }
+  @media #{$large-and-up} {
+    height: 10rem;
+  }
+}
+
+/*-------- figure --------*/
+figure{
+  @media #{$medium-and-down} {
+    margin: 1rem 2rem;
+  }
+  @media  #{$small-and-down}{
+    margin: 1rem 1rem
+  }
+
+  figcaption {
+    color: darkgrey;
+  }
+}
+
+
+
+.blank {
+  height: 800px;
+  background-color: lightgrey;
+}
+
+#staggered-test li {
+  opacity: 0;
+}
+
+#image-test {
+  opacity: 0;
+}
+
+/*-------- parallax --------*/
+.parallax-container {
+  height: 500px;
+}

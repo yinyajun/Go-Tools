@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <div class="col s12">
+                {{$tagNum :=len (index .Site.Taxonomies "tags")}}
+                <p>Total {{$tagNum}} Tags</p>
+
+                <section>
+                    <div class="collection">
+                        {{ range .Pages}}
+                        {{- partial "posts/li-post" . -}}
+                        {{end}}
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}1

@@ -1,0 +1,13 @@
+@mixin themify {
+  @each $theme-name, $theme-map in $themes {
+    $theme-map: $theme-map !global;
+    html[data-theme=#{$theme-name}] & {
+      @content;
+    }
+  }
+}
+
+
+
+
+

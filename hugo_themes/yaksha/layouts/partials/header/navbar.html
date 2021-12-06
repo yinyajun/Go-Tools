@@ -1,0 +1,86 @@
+{{/*
+Hugo has three classifiers: sections, taxonomies and menus. According to the doc,
+
+1. sections: mirrors content files hierarchy, they are auto-generated.
+
+2. taxonomies: User-defined taxonomies to help you demonstrate logical relationships between content.
+They are set in the front matter of your content md files, default taxonomies are `tags` and `categories`.
+
+3. menus: powerful tools to create menu entries without being attached to any content.
+It is a costumed static router system, you could add any accessible content to menu entries.
+
+I prefer to use `menu` as an exposed classifier due to its flexibility.
+Internally, I choose from sections and taxonomies to add to menu entries.
+
+* menu_post: section_post/
+* menu_cates: taxonomies_categories/
+* menu_tags: taxonomies_tags/
+* menu_about: section_about/
+...
+*/}}
+
+
+
+{{$scratch := newScratch}}
+
+<!--sections-->
+{{range .Site.Sections}}
+    {{$title:=.Title}}
+    {{$permalink:=.Permalink}}
+{{$scratch.SetInMap "sections" $title $permalink}}
+{{end}}
+
+
+<!--menus-->
+{{ $menuKey := .Site.Params.mainMenu | default "main"}}
+{{range index .Site.Menus $menuKey}}
+{{$title:=.Title}}
+{{$permalink:=.URL}}
+{{$scratch.SetInMap "menus" $title $permalink}}
+{{end}}
+
+
+<!--taxonomies-->
+{{range $title, $_:= .Site.Taxonomies}}
+    {{ $permalink:= path.Join (`/` | relLangURL) ($title | urlize) }}
+{{$scratch.SetInMap "taxonomies" $title $permalink}}
+{{end}}
+
+
+{{$menus := $scratch.Get "menus"}}
+{{$taxonomies := $scratch.Get "taxonomies"}}
+{{$sections := $scratch.Get "sections"}}
+{{ $hasSearch := .Site.Params.searchEnable | default true}}
+
+{{$entries:= $menus | default ($taxonomies | default $sections) }}
+{{$searchIcon := .Site.Data.yaksha.icons.search | safeHTML}}
+{{$menuIcon := .Site.Data.yaksha.icons.menu | safeHTML}}
+
+
+
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <div class="row">
+                <div class="container">
+                    <a href="#" class="sidenav-trigger right" data-target="mobile-nav">{{$menuIcon}}</a>
+
+                    <a href="{{.Site.BaseURL}}" class="brand-logo">{{.Site.Title}}</a>
+
+                    <ul class="right hide-on-med-and-down">
+                        {{range $title, $permalink:=$entries}}
+                        <li><a href="{{$permalink}}">{{$title}}</a></li>
+                        {{end}}
+                        {{- if $hasSearch -}}
+                        <li><a href="#">{{$searchIcon}}</a></li>
+                        {{end}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+
+

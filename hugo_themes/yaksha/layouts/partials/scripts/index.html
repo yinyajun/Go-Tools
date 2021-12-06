@@ -1,0 +1,10 @@
+<!--scripts to load-->
+{{ $jQuery := resources.Get "js/jquery.min.js" }}
+{{ $materialize := resources.Get "js/materialize.min.js" }}
+{{ $util := resources.Get "js/util.js" | resources.Minify }}
+<!--bundle scripts -->
+{{ $js := slice $jQuery $materialize $util | resources.Concat "assets/js/bundle.js" }}
+<!--link scripts-->
+<script src='{{ $js.RelPermalink }}'></script>
+
+

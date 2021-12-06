@@ -1,0 +1,118 @@
+/*-------- post-nav --------*/
+.post-nav {
+  margin-top: 1.5rem;
+
+  a {
+    position: relative;
+    display: block;
+    color: #555;
+    border-bottom: none;
+  }
+}
+
+.post-nav-prev {
+  text-align: left;
+  padding: 0 !important;
+  a {
+    padding-left: 2rem;
+  }
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.post-nav-next {
+  text-align: right;
+  padding: 0 !important;
+  a {
+    padding-right: 2rem;
+  }
+  i {
+    position: absolute;
+    top: 0;
+    right: 0
+  }
+}
+
+/*-------- post-related --------*/
+.post-related {
+  margin-top: 1.5rem;
+}
+
+/*-------- post-header --------*/
+// small head
+small {
+  font-size: 60%;
+  font-weight: normal;
+  color: darkgrey;
+}
+
+/*-------- post-card-content --------*/
+.post-card-content{
+  padding-left: 10%!important;
+  padding-right: 10%!important;
+}
+
+
+/*-------- article post container --------*/
+.article-post-container{
+  @extend .container-fluid;
+  @media #{$medium-only} {
+    width: 85%;
+  }
+}
+
+/*-------- post-toc --------*/
+.toc-wrapper{
+  margin-top: 5rem;
+  padding-left: 0.5rem;
+}
+
+.toc-header{
+  position: relative;
+  color: $primary-color-dark;
+  i{
+    position: absolute;
+    top: 0.5rem;
+    left: 0
+  }
+}
+
+.toc-title{
+  position: absolute;
+  left: 2.25rem;
+  top: 0;
+  font-size: 1.75rem;
+}
+
+#TableOfContents{
+  position: relative;
+  top: 2rem;
+  left: 0;
+}
+
+.table-of-contents{
+  ul{
+    padding-top: 0.25rem;
+    padding-left: 0.75rem;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/*-------- card-post --------*/
+.no-shadow-card{
+  @extend .card;
+  box-shadow: none!important;
+}
+
+/*-------- board --------*/
+.board{
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  position: relative;
+  margin-top: -3rem;
+  border-radius: 0.5rem;
+  z-index: 3;
+}

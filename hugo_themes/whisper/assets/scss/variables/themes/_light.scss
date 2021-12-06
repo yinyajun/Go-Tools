@@ -1,0 +1,74 @@
+// -------------------
+// light theme colors
+// -------------------
+// colors
+$primary: $white;
+$primary-frosted: rgba($white, 0.15);
+
+$contrast-primary: $black;
+$contrast-primary-lighten-1: rgba($contrast-primary, .9);
+$contrast-primary-lighten-2: rgba($contrast-primary, .7);
+$contrast-primary-lighten-3: rgba($contrast-primary, .5);
+$contrast-primary-lighten-4: rgba($contrast-primary, .3);
+$contrast-primary-lighten-5: rgba($contrast-primary, .1);
+
+$secondary: #1e90ff; // dodgerblue
+$secondary-lighten-1: rgba($secondary, .8);
+$secondary-lighten-2: rgba($secondary, .6);
+$secondary-lighten-3: rgba($secondary, .4);
+
+// text
+$text-color-default: $contrast-primary;
+$text-color-primary: color-yiq($primary);
+
+// background
+$bg-color-primary: $primary;
+
+// markdown
+$markdown-code-color: #e83e8c;
+
+// navbar
+$navbar-light-color: $contrast-primary-lighten-3 !default;
+$navbar-light-hover-color: $contrast-primary-lighten-2 !default;
+$navbar-light-active-color: $contrast-primary-lighten-1 !default;
+$navbar-light-disabled-color: $contrast-primary-lighten-4 !default;
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !default;
+$navbar-light-toggler-border-color: $contrast-primary-lighten-5 !default;
+
+// -------------------
+// light theme
+// -------------------
+
+$default-theme: (
+  // color scheme
+        colors: (
+                primary: $primary,
+                primary-frosted: $primary-frosted,
+                contrast-primary: $contrast-primary,
+                contrast-primary-lighten-1: $contrast-primary-lighten-1,
+                contrast-primary-lighten-2: $contrast-primary-lighten-2,
+                contrast-primary-lighten-3: $contrast-primary-lighten-3,
+                contrast-primary-lighten-4: $contrast-primary-lighten-4,
+                contrast-primary-lighten-5: $contrast-primary-lighten-5,
+                secondary: $secondary,
+                secondary-lighten-1: $secondary-lighten-1,
+                secondary-lighten-2: $secondary-lighten-2,
+                secondary-lighten-3: $secondary-lighten-3,
+        ),
+  // text color
+        text-color-default: $text-color-default,
+        text-color-primary: $text-color-primary,
+  // background color
+        bg-color-primary: $primary,
+  //markdown
+        markdown-code-color:$markdown-code-color,
+  // navbar
+        navbar-color: $navbar-light-color,
+        navbar-hover-color: $navbar-light-hover-color,
+        navbar-active-color: $navbar-light-active-color,
+        navbar-disabled-color: $navbar-light-disabled-color,
+        navbar-toggler-icon-bg: $navbar-light-toggler-icon-bg,
+        navbar-toggler-border-color: $navbar-light-toggler-border-color,
+        navbar-brand-color: $navbar-light-active-color,
+        navbar-brand-hover-color: $navbar-light-active-color,
+);

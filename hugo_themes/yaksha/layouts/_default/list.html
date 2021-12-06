@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="container">
+    <div class="row">
+        <section>
+            {{ range .Pages}}
+            {{- partial "posts/card-post" . -}}
+            {{end}}
+        </section>
+    </div>
+</div>
+{{end}}

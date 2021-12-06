@@ -1,0 +1,13 @@
+<!--link stylesheet and fonts -->
+
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--<link type="text/css" href="/css/materialize.css" rel="stylesheet">-->
+{{ $styles := resources.Get "scss/main.scss" | toCSS  }}
+<link type="text/css" href='{{ $styles.Permalink }}'  rel="stylesheet">
+<!--integrity="{{ $styles.Data.Integrity }}"-->
+<!--<link type="text/css" href="/css/github-markdown.css" rel="stylesheet">-->
+<!--<link type="text/css" href="/css/main.css" rel="stylesheet">-->
+
+
+

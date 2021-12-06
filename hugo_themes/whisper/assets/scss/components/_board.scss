@@ -1,0 +1,22 @@
+.post-board {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @include media-breakpoint-down("md") {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @include media-breakpoint-down("sm") {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  @include media-breakpoint-down("xs") {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+}
+
+.board {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,11 @@
+<!--head-->
+{{partial "head/meta.html" .}}
+
+{{if eq .Title .Site.Title }}
+<title>{{.Title}}</title>
+{{else}}
+<title>{{.Title}} - {{.Site.Title}}</title>
+{{end}}
+
+<title>{{.Title}} - {{.Site.Title}}</title>
+{{partial "head/stylesheets.html" .}}

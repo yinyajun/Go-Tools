@@ -1,0 +1,35 @@
+<article>
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col s0 l2 "></div>
+            <div class="col s12 l8 no-padding">
+                <div class="card">
+                    <div class="card-content post-card-content">
+                        <header>
+                            <h4>{{.Title}}<br><small>{{ .Description }}</small></h4>
+                            <span>
+                    {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </span>
+                            <span>categories:{{ .Params.categories }}</span>
+                            <span>tags:{{ .Params.tags }}</span>
+                        </header>
+                        <div class="markdown-body ">
+                            {{partial "utils/toc-insert-class" .Content}}
+                        </div>
+                        <footer>
+                            {{$relateEnable := .Site.Params.relatedEnable | default true}}
+                            {{if $relateEnable }}
+                            {{partial "posts/post-related" .}}
+                            {{end}}
+                            {{partial "posts/post-nav" .}}
+                        </footer>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col s0 l2">
+                {{partial "posts/post-toc" .}}
+            </div>
+        </div>
+    </div>
+</article>

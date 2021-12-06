@@ -1,0 +1,18 @@
+{{$img := .Site.Params.slideImage}}
+<div class="slide slide-theme">
+    <div class="slide-box">
+        <div id="slide-img" style="background-image: url('{{$img}}')"></div>
+        <span class="mask-layer"></span>
+    </div>
+    <div class="slide-text">
+        <div class="container">
+            <span class="h1" style="font-weight: 400">Welcome to my blog</span>
+        </div>
+    </div>
+    <div id="slide-switcher" class="switcher">
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </div>
+</div>
+
+

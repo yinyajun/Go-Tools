@@ -1,0 +1,12 @@
+<div class="post-related">
+    {{ $related := .Site.RegularPages.Related . | first 10 }}
+    {{ with $related }}
+    <ul class="collection with-header no-padding">
+        <li class="collection-header"><strong>See Also</strong></li>
+        {{ range . }}
+        <li class="collection-item"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
+

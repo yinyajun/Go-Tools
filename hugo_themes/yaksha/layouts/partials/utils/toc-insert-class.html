@@ -1,0 +1,6 @@
+{{. | replaceRE `<h2(.|\n)*?id=` `<h2 class="scrollspy" id=`  | replaceRE `<h3(.|\n)*?id=` `<h3 class="scrollspy" id=` | replaceRE `<h4(.|\n)*?id=` `<h4 class="scrollspy" id=`  | replaceRE `<h5(.|\n)*?id=` `<h5 class="scrollspy" id=`  | replaceRE `<h6(.|\n)*?id=` `<h6 class="scrollspy" id=` | safeHTML }}
+
+
+
+
+

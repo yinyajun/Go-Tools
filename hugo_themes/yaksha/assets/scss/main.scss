@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+// modify souce code for nice style (relatively small segment )
+
+// --------------------------------
+// material @ v1.0.0
+// https://materializecss.com/getting-started.html
+// --------------------------------
+@import "materialize/main";
+
+// --------------------------------
+// github-markdown @ v4.0.0
+// https://github.com/sindresorhus/github-markdown-css
+// --------------------------------
+@import "github-markdown/github-markdown";
+
+// --------------------------------
+// for theme yaksha
+// --------------------------------
+@import "yaksha/variables";
+@import "yaksha/mixins";
+@import "yaksha/global";
+@import "yaksha/img";
+@import "yaksha/post";
+@import "yaksha/card";
+

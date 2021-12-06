@@ -1,0 +1,30 @@
+/***************
+    Nav List
+***************/
+.table-of-contents {
+  &.fixed {
+      position: fixed;
+    }
+
+  li {
+    padding: 2px 0;
+  }
+  a {
+    display: inline-block;
+    font-weight: normal;
+    color: $primary-color-dark;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding-right: 1rem;
+
+
+    &:hover {
+      color: lighten($secondary-color, 3%);
+      padding-left: 2px;
+    }
+    &.active {
+      font-weight: bold;
+      color: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{{$viewlistIcon := .Site.Data.yaksha.icons.viewlist | safeHTML}}
+<div class="toc-wrapper pinned scrolling">
+    <div class="toc-header">
+        {{$viewlistIcon}}<span class="toc-title">TOC</span>
+    </div>
+    {{.TableOfContents | replaceRE "<ul>" `<ul class="table-of-contents">`| replaceRE "<nav" "<div" | replaceRE `</nav>` `</div>` | safeHTML }}
+</div>

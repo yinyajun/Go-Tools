@@ -1,0 +1,22 @@
+
+<p>面包屑导航</p>
+<ol  class="nav navbar-nav">
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+</ol>
+
+
+<!--
+p2: current page.
+p1: ancestral page(p1=p1 at the begining)
+Use recursion to get all ancestral pages.
+-->
+{{ define "breadcrumbnav" }}
+{{ if .p1.Parent }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+{{ else if not .p1.IsHome }}
+{{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+{{ end }}
+<li {{ if eq .p1 .p2 }} class="active"{{ end }}>
+<a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+</li>
+{{ end }}

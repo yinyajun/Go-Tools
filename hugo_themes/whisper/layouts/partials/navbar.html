@@ -1,0 +1,130 @@
+{{/*
+Hugo has three classifiers: sections, taxonomies and menus. According to the doc,
+
+1. sections: mirrors content files hierarchy, they are auto-generated.
+
+2. taxonomies: User-defined taxonomies to help you demonstrate logical relationships between content.
+They are set in the front matter of your content md files, default taxonomies are `tags` and `categories`.
+
+3. menus: powerful tools to create menu entries without being attached to any content.
+It is a costumed static router system, you could add any accessible content to menu entries.
+
+I prefer to use `menu` as an exposed classifier due to its flexibility.
+Internally, I choose from sections and taxonomies to add to menu entries.
+
+* menu_post: section_post/
+* menu_cates: taxonomies_categories/
+* menu_tags: taxonomies_tags/
+* menu_about: section_about/
+...
+*/}}
+
+
+{{$s := newScratch}}
+
+<!--sections-->
+{{range .Site.Sections}}
+{{$s.Add "sections" (slice (slice .Title .Permalink))}}
+{{end}}
+
+<!--menus-->
+{{ $menuKey := .Site.Params.mainMenu | default "main"}}
+{{range index .Site.Menus $menuKey}}
+{{$s.Add "menus" (slice (slice .Title .URL))}}
+{{end}}
+
+<!--taxonomies-->
+{{range $title, $_:= .Site.Taxonomies}}
+{{ $permalink:= path.Join (`/` | relLangURL) ($title | urlize) }}
+{{$s.Add "taxonomies" (slice (slice $title $permalink))}}
+{{end}}
+
+<!--search-->
+{{ $enableSearch := .Site.Params.searchEnable | default true}}
+{{$searchIcon :=.Site.Data.whisper.icons.search|safeHTML}}
+
+{{$menus := $s.Get "menus"}}
+{{$taxonomies := $s.Get "taxonomies"}}
+{{$sections := $s.Get "sections"}}
+{{$entries:= $menus | default ($taxonomies | default $sections) }}
+
+
+
+<nav class="fixed-top">
+    <div class="navbar navbar-expand-sm  navbar-theme" id="navbar">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="/">{{.Site.Title}}</a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" onclick="overlayToggle()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    {{range $pair:=$entries}}
+                    {{$title := index $pair 0 }}
+                    {{$link := index $pair 1 }}
+                    <li><a class="nav-link" href="{{$link}}">{{$title}}</a></li>
+                    {{end}}
+                    {{if $enableSearch}}
+                    <li><a class="nav-link" href="#">{{$searchIcon}}</a></li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--<nav class="navbar navbar-expand-sm  navbar-theme fixed-top" id="nav">-->
+<!--    <div class="container">-->
+<!--        &lt;!&ndash; Brand &ndash;&gt;-->
+<!--        <a class="navbar-brand" href="/">{{.Site.Title}}</a>-->
+
+<!--        &lt;!&ndash; Toggle Button &ndash;&gt;-->
+<!--        <button class="navbar-toggler" type="button" onclick="overlayToggle()">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; Navbar links &ndash;&gt;-->
+<!--        <div class="collapse navbar-collapse">-->
+<!--            <ul class="navbar-nav">-->
+<!--                {{range $pair:=$entries}}-->
+<!--                {{$title := index $pair 0 }}-->
+<!--                {{$link := index $pair 1 }}-->
+<!--                <li><a class="nav-link" href="{{$link}}">{{$title}}</a></li>-->
+<!--                {{end}}-->
+<!--                {{if $enableSearch}}-->
+<!--                <li><a class="nav-link" href="#">{{$searchIcon}}</a></li>-->
+<!--                {{end}}-->
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</nav>-->
+
+
+<!-- The overlay nav -->
+<div id="overlayNav" class="overlay fixed-top overlay-theme">
+
+    <div class="overlay-mask">
+        <span class="mask-layer"></span>
+    </div>
+
+    <a href="javascript:void(0)" class="closebtn" onclick="overlayToggle()">&times;</a>
+    <div class="overlay-content">
+        <ul class="overlay-nav">
+            {{range $pair:=$entries}}
+            {{$title := index $pair 0 }}
+            {{$link := index $pair 1 }}
+            <li><a class="nav-link" href="{{$link}}">{{$title}}</a></li>
+            {{end}}
+            {{if $enableSearch}}
+            <li><a class="nav-link" href="#">{{$searchIcon}}</a></li>
+            {{end}}
+        </ul>
+
+    </div>
+</div>
+

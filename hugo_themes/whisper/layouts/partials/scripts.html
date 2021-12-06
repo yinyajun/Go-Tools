@@ -1,0 +1,17 @@
+<!--scripts to load-->
+{{ $utils := resources.Get "js/utils.js" }}
+{{ $parallax := resources.Get "js/parallax.js" }}
+{{ $overlay := resources.Get "js/overlay.js" }}
+{{ $switcher := resources.Get "js/switcher.js" }}
+
+<!--bundle scripts -->
+{{ .Scratch.Add "bundles" (slice $utils) }}
+{{ .Scratch.Add "bundles" (slice $parallax) }}
+{{ .Scratch.Add "bundles" (slice $overlay) }}
+{{ .Scratch.Add "bundles" (slice $switcher) }}
+
+{{ $js := .Scratch.Get "bundles" | resources.Concat "assets/js/bundle.js" }}
+
+<!--link scripts-->
+<script src='{{ $js.RelPermalink }}'></script>
+

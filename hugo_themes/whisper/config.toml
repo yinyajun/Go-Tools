@@ -1,0 +1,45 @@
+# PLEASE DO NOT RENAME THE KEY UNLESS YOU KNOW WHAT YOU ARE DOING.
+# Just because key names are hard coded in templates.
+[params]
+    # global
+    description = "Welcome to my blog!"
+
+    # menu
+    mainMenuName = "main"
+    enableSearch = true
+
+    # post
+    enableRelated = true
+    enableImgBox = true
+
+    # full-screen-background
+    slideImage = "/images/d.jpg"
+
+# default menu entries setting
+# you can rewrite these to make custom menus
+# make sure menu name is correspond with mainMenuName mensioned in the params
+# e.g. `menu.main`, `mainMenuName="main"`
+[menu]
+    [[menu.main]]
+        name="home_page"
+        title="home"
+        url="/"
+        weight=1
+
+    [[menu.main]]
+        name="categories_page"
+        title="categories"
+        url="/categories"
+        weight=2
+
+    [[menu.main]]
+        name="tags_page"
+        title="tags"
+        url="/tags"
+        weight=3
+
+    [[menu.main]]
+        name="about_page"
+        title="about"
+        url="/about"
+        weight=4

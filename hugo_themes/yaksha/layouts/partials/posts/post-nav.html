@@ -1,0 +1,22 @@
+{{$chevronLeftIcon := .Site.Data.yaksha.icons.chevron_left | safeHTML}}
+{{$chevronRightIcon := .Site.Data.yaksha.icons.chevron_right | safeHTML}}
+
+<div class="post-nav">
+    <div class="row">
+        <div class="col s5 m3 post-nav-prev">
+            {{with .Prev}}
+            <a href="{{.Permalink}}" rel="prev">
+                {{$chevronLeftIcon}}<span>{{.Title}}</span>
+            </a>
+            {{end}}
+        </div>
+        <div class="col s2"></div>
+        <div class="col s5 push-m4 m3 post-nav-next">
+            {{with .Next}}
+            <a href="{{.Permalink}}" rel="next">
+                <span>{{.Title}}</span>{{$chevronRightIcon}}
+            </a>
+            {{end}}
+        </div>
+    </div>
+</div>

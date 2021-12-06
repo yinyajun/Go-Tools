@@ -1,0 +1,33 @@
+<div class="footer-text">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h6 class="white-text">About</h6>
+                <p class="grey-text text-lighten-4">
+                    Yaksha is a simple theme based on Materialize. It is designed for tech blogs and supports rich text,
+                    math equations and code highlights.
+            </div>
+
+            {{$cates := index .Site.Taxonomies "categories"}}
+            <div class="col l3 s6">
+                <h6 class="white-text">Categories</h6>
+                <ul>
+                    {{range $k,$v:= $cates}}
+                    <li><a class="grey-text text-lighten-3" href="{{$v}}">{{$k}}</a></li>
+                    {{end}}
+
+                </ul>
+            </div>
+
+
+            <div class="col l3 s6">
+                <h6 class="white-text">Sections</h6>
+                <ul>
+                    {{range .Site.Sections}}
+                    <li><a class="grey-text text-lighten-3" href="{{.Permalink}}">{{.Name}}</a></li>
+                    {{end}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

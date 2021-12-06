@@ -1,0 +1,19 @@
+# 规则
+rules = [
+    { name = "rule1", ignored_words = [], error_words = ["abc"], warning_words = [] },
+    { name = "rule2", ignored_words = [], error_words = ["123"], warning_words = [] },
+]
+
+# 监控日志文件
+files = [
+    { name = "/tmp/abc.log", rule = "rule1" },
+    { name = "/tmp/abc_${time}.log", format = "04", rule = "rule2" },
+]
+
+# 文件更新检测周期（秒）
+period = 30
+
+# 服务本身的日志等级（生产环境请设置为info级别以上）
+log_level = "debug"
+
+alarm_url = "https://oapi.dingtalk.com/robot/send?access_token=1234567890"

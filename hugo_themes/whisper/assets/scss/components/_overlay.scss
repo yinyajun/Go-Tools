@@ -1,0 +1,71 @@
+.overlay-theme {
+  @include themify {
+    .mask-layer {
+      background-color: rgba(themed("bg-color-primary"), 0.98);
+      opacity: 0.98;
+    }
+    a {
+      color: themed("navbar-active-color");
+      @include hover-focus() {
+        color: themed("navbar-color");
+      }
+    }
+  }
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  overflow-y: hidden;
+  transition: .6s;
+  @media (max-height: 450px) {
+    overflow-y: auto;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+
+    .overlay-nav {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    font-size: 4rem;
+    line-height: 4rem;
+    @media (max-height: 450px) {
+      font-size: 3rem;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  a {
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 2rem;
+    //color: #818181;
+    display: block;
+    transition: 0.3s;
+    //@include hover-focus() {
+    //  color: #f1f1f1;
+    //}
+    @media (max-height: 450px) {
+      font-size: 1.25rem
+    }
+  }
+
+}
+
+
+

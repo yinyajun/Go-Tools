@@ -1,0 +1,43 @@
+<article class="no-shadow-card">
+    <div class="container-fluid">
+        <div class="row">
+
+            {{ .Scratch.Set "postHeaderCls" "col s12"}}
+            {{if .Params.image}}
+            {{.Scratch.Set "postHeaderCls" "col s7 m8"}}
+            {{end}}
+
+            <div class='{{.Scratch.Get "postHeaderCls"}}'>
+                <header>
+                    <a href='{{ .Permalink }}'>
+                        <p>{{.Title}}</p>
+                    </a>
+                </header>
+                <a href='{{ .Permalink }}'>
+                    {{ if .Description }}
+                    <p>{{ .Description }}</p>
+                    {{ else }}
+                    <p>{{ .Summary }}</p>
+                    {{ end }}
+                </a>
+                <footer>
+                    {{ if not .Date.IsZero}}
+                    <span>{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+                    {{end}}
+                    <span>{{ .FuzzyWordCount }} Words</span>
+                </footer>
+            </div>
+
+
+            {{if .Params.image}}
+            <div class="col s5 m4">
+                <a href="{{.Permalink}}">
+                    <img src="{{.Params.image}}" alt="img" class="img-thumbnails">
+                </a>
+            </div>
+            {{end}}
+
+
+        </div>
+    </div>
+</article>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fdb33a26-3baa-4531-a08e-486dd2e4195f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZG6xfLpBH6Ej0hoielR3Fynr05" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../fast_hugo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\static" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\scss\components" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\sass\components" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\sass\utilities" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\sass\functions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\scss\mixins" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\scss\components\myself" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\sass\themes" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets\sass\mixins" />
+      <recent name="C:\Users\Administrator\Desktop\hugo\site\themes\whisper\assets" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdb33a26-3baa-4531-a08e-486dd2e4195f" name="Default Changelist" comment="" />
+      <created>1584453331097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584453331097</updated>
+      <workItem from="1584453332367" duration="3118000" />
+      <workItem from="1584480440164" duration="13017000" />
+      <workItem from="1584662608213" duration="705000" />
+      <workItem from="1584801094416" duration="8648000" />
+      <workItem from="1584831532671" duration="8048000" />
+      <workItem from="1584841971413" duration="4285000" />
+      <workItem from="1584851462496" duration="20566000" />
+      <workItem from="1584879226761" duration="14736000" />
+      <workItem from="1585227150705" duration="599000" />
+      <workItem from="1585240484441" duration="2603000" />
+      <workItem from="1585265143304" duration="7421000" />
+      <workItem from="1585787232438" duration="164000" />
+      <workItem from="1588291199204" duration="3179000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="711" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584864182752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="711" y="327" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584864182752" />
+    <state x="210" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585265536960">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="210" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1585265536960" />
+    <state x="495" y="100" width="1325" height="850" key="DiffContextDialog" timestamp="1584882195322">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="129" y="99" width="1691" height="842" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584867369631" />
+    <state x="495" y="100" width="1325" height="850" key="DiffContextDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1584882195322" />
+    <state x="260" y="282" key="FileChooserDialogImpl" timestamp="1588292130621">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="260" y="279" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584856131392" />
+    <state x="260" y="282" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1588292130621" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1584872838022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1584872838022" />
+    <state x="1060" y="100" width="760" height="850" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1584837922512">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1060" y="100" width="760" height="850" maximized="true" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1584837922512" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1584872930769">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584872930768" />
+    <state x="45" y="120" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584863993256">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="45" y="120" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584863993256" />
+    <state x="960" y="0" width="960" height="1050" key="dock-window-1" timestamp="1585271596453">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1584862878741" />
+    <state x="960" y="0" width="960" height="1050" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1585271596453" />
+    <state x="0" y="0" width="960" height="1050" key="dock-window-2" timestamp="1585241188454">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="0" y="0" width="960" height="1040" key="dock-window-2/0.0.1920.1040@0.0.1920.1040" timestamp="1584872903197" />
+    <state x="0" y="0" width="960" height="1050" key="dock-window-2/0.0.1920.1050@0.0.1920.1050" timestamp="1585241188454" />
+    <state x="960" y="0" width="960" height="1040" key="dock-window-3" timestamp="1584873086073">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="960" y="0" width="960" height="1040" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1584873086073" />
+    <state x="0" y="0" width="960" height="1050" key="dock-window-3/0.0.1920.1050@0.0.1920.1050" timestamp="1584847982269" />
+    <state x="263" y="328" width="626" height="490" key="find.popup" timestamp="1584895042257">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="263" y="325" width="626" height="490" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584870299074" />
+    <state x="263" y="328" width="626" height="490" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1584895042257" />
+    <state x="1103" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1584804650380">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1103" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1584804650380" />
+  </component>
+</project>

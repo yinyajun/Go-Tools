@@ -1,0 +1,13 @@
+{{/*
+Usage: {{< fig "img-path" "img-caption" >}}
+*/}}
+
+{{ $img := .Page.Resources.GetMatch (.Get 0)}}
+{{ $caption := (.Get 1) }}
+
+<figure>
+    {{/* materialboxed makes img into block element */}}
+    <img src="{{$img}}" alt="{{$caption}}" class="materialboxed"
+         data-caption="{{$caption}}" style="margin: 0 auto" />
+    <figcaption class="center-align">{{$caption}}</figcaption>
+</figure>

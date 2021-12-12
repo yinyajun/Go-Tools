@@ -7,6 +7,7 @@ many tools implemented in Golang
 | project           | comments     |
 | ----------------- | ------------ |
 | abtest            | AB测试分流   |
+| map_reduce        | MapReduce任务    |
 | dag_flow          | DAG工作流    |
 | hugo_themes       | Hugo主题     |
 | log_monitor       | 日志监控服务 |
